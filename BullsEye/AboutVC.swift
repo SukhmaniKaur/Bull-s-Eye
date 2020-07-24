@@ -16,7 +16,10 @@ class AboutVC: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-
+    @IBAction func closeBtnIsPressed(_ sender: UIButton) {
+        self.navigationController?.popViewController(animated: true)
+    }
+    
     /*
     // MARK: - Navigation
 

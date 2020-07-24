@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="O4F-7f-ZJp">
     <device id="retina6_1" orientation="landscape" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
@@ -81,6 +81,9 @@
                                     <constraint firstAttribute="height" constant="50" id="quz-DM-ulB"/>
                                 </constraints>
                                 <state key="normal" image="InfoButton" backgroundImage="SmallButton"/>
+                                <connections>
+                                    <action selector="infoBtnIsPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="EqN-hR-zie"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y7p-C9-njk">
                                 <rect key="frame" x="244" y="308" width="49" height="20"/>
@@ -142,6 +145,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" id="FUV-kB-oDR"/>
                     <connections>
                         <outlet property="roundLbl" destination="pwd-Vs-WSH" id="NyG-pZ-ZYO"/>
                         <outlet property="scoreLbl" destination="sxX-fe-5Rr" id="6Qb-WE-Zpu"/>
@@ -151,7 +155,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="138.61607142857142" y="92.753623188405811"/>
+            <point key="canvasLocation" x="881.91964285714278" y="92.753623188405811"/>
         </scene>
         <!--AboutVC-->
         <scene sceneID="DgN-BG-nAb">
@@ -165,7 +169,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
                             </imageView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="DGz-jd-Uya">
-                                <rect key="frame" x="64" y="20" width="768" height="353"/>
+                                <rect key="frame" x="64" y="50" width="768" height="323"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <string key="text">*** Bull’s Eye ***
 
@@ -176,13 +180,29 @@ Your goal is to place the slider as close as possible to the target value. The c
                                 <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cFQ-kd-ROh">
+                                <rect key="frame" x="732" y="20" width="70" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="70" id="6Cq-AM-20j"/>
+                                    <constraint firstAttribute="height" constant="30" id="NuF-2e-5mT"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="18"/>
+                                <state key="normal" title="CLOSE">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="closeBtnIsPressed:" destination="e0B-HM-USj" eventType="touchUpInside" id="yZ2-bT-Ymw"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="3ME-9h-Wt7" firstAttribute="trailing" secondItem="DGz-jd-Uya" secondAttribute="trailing" constant="20" id="4pf-dY-bpo"/>
                             <constraint firstAttribute="trailing" secondItem="asr-g5-uDm" secondAttribute="trailing" id="6nL-SO-Apw"/>
                             <constraint firstItem="DGz-jd-Uya" firstAttribute="leading" secondItem="3ME-9h-Wt7" secondAttribute="leading" constant="20" id="QQ7-Qc-OfT"/>
-                            <constraint firstItem="DGz-jd-Uya" firstAttribute="top" secondItem="3ME-9h-Wt7" secondAttribute="top" constant="20" id="ekj-Ow-OHe"/>
+                            <constraint firstItem="cFQ-kd-ROh" firstAttribute="top" secondItem="3ME-9h-Wt7" secondAttribute="top" constant="20" id="Uav-b9-fHx"/>
+                            <constraint firstItem="3ME-9h-Wt7" firstAttribute="trailing" secondItem="cFQ-kd-ROh" secondAttribute="trailing" constant="50" id="bxi-Ni-Y2C"/>
+                            <constraint firstItem="DGz-jd-Uya" firstAttribute="top" secondItem="3ME-9h-Wt7" secondAttribute="top" constant="50" id="ekj-Ow-OHe"/>
                             <constraint firstItem="3ME-9h-Wt7" firstAttribute="bottom" secondItem="DGz-jd-Uya" secondAttribute="bottom" constant="20" id="f1m-CQ-wtL"/>
                             <constraint firstAttribute="bottom" secondItem="asr-g5-uDm" secondAttribute="bottom" id="h3J-K9-fz6"/>
                             <constraint firstItem="asr-g5-uDm" firstAttribute="leading" secondItem="mkR-CT-odS" secondAttribute="leading" id="jOq-AA-UJr"/>
@@ -194,6 +214,23 @@ Your goal is to place the slider as close as possible to the target value. The c
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BXq-zh-266" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="132.58928571428572" y="950.72463768115949"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="zE9-54-sPa">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="O4F-7f-ZJp" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="QPH-6o-qeR">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="wtg-g5-THp"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="d2E-Pv-mD6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="138.61607142857142" y="92.753623188405811"/>
         </scene>
     </scenes>
     <resources>

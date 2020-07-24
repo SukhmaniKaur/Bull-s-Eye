@@ -90,5 +90,11 @@ class ViewController: UIViewController {
         startNewRound()
         updateLabels()
     }
+    
+    @IBAction func infoBtnIsPressed(_ sender: UIButton) {
+        let MAIN = UIStoryboard(name: "Main", bundle: nil)
+        let vc = MAIN.instantiateViewController(withIdentifier: "AboutVC") as! AboutVC
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
 }
 
