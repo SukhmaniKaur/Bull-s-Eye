@@ -153,6 +153,48 @@
             </objects>
             <point key="canvasLocation" x="138.61607142857142" y="92.753623188405811"/>
         </scene>
+        <!--AboutVC-->
+        <scene sceneID="DgN-BG-nAb">
+            <objects>
+                <viewController storyboardIdentifier="AboutVC" id="e0B-HM-USj" customClass="AboutVC" customModule="BullsEye" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mkR-CT-odS">
+                        <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="asr-g5-uDm">
+                                <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="DGz-jd-Uya">
+                                <rect key="frame" x="64" y="20" width="768" height="353"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <string key="text">*** Bull’s Eye ***
+
+Welcome to the awesome game of Bull’s Eye where you can win points and fame by dragging a slider.
+
+Your goal is to place the slider as close as possible to the target value. The closer you are, the more points you score. Enjoy!</string>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="3ME-9h-Wt7" firstAttribute="trailing" secondItem="DGz-jd-Uya" secondAttribute="trailing" constant="20" id="4pf-dY-bpo"/>
+                            <constraint firstAttribute="trailing" secondItem="asr-g5-uDm" secondAttribute="trailing" id="6nL-SO-Apw"/>
+                            <constraint firstItem="DGz-jd-Uya" firstAttribute="leading" secondItem="3ME-9h-Wt7" secondAttribute="leading" constant="20" id="QQ7-Qc-OfT"/>
+                            <constraint firstItem="DGz-jd-Uya" firstAttribute="top" secondItem="3ME-9h-Wt7" secondAttribute="top" constant="20" id="ekj-Ow-OHe"/>
+                            <constraint firstItem="3ME-9h-Wt7" firstAttribute="bottom" secondItem="DGz-jd-Uya" secondAttribute="bottom" constant="20" id="f1m-CQ-wtL"/>
+                            <constraint firstAttribute="bottom" secondItem="asr-g5-uDm" secondAttribute="bottom" id="h3J-K9-fz6"/>
+                            <constraint firstItem="asr-g5-uDm" firstAttribute="leading" secondItem="mkR-CT-odS" secondAttribute="leading" id="jOq-AA-UJr"/>
+                            <constraint firstItem="asr-g5-uDm" firstAttribute="top" secondItem="3ME-9h-Wt7" secondAttribute="top" id="pVp-lP-l3P"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="3ME-9h-Wt7"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BXq-zh-266" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="132.58928571428572" y="950.72463768115949"/>
+        </scene>
     </scenes>
     <resources>
         <image name="Background" width="568" height="320"/>
